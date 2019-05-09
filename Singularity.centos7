@@ -36,6 +36,5 @@ Include: yum
     yum makecache
     yum -y update
 
-%startscript
-    systemctl restart dbus
-    systemctl start avahi-daemon
+    wget https://git.ligo.org/lscsoft/gstlal/raw/master/gstlal-inspiral/tests/disable_service_discovery.patch 
+    patch /usr/bin/gstlal_inspiral ./disable_service_discovery.patch
