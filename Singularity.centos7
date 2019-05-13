@@ -9,7 +9,7 @@ Include: yum
     This is a singularity container of LIGO's LSCSoft on CentOS7.
 
 %post
-    yum -y install wget patch
+    yum -y install wget
 
     # Commands taken from https://wiki.ligo.org/Computing/ScientificLinux
 
@@ -35,6 +35,3 @@ Include: yum
     yum clean all
     yum makecache
     yum -y update
-
-    wget https://git.ligo.org/lscsoft/gstlal/raw/master/gstlal-inspiral/tests/disable_service_discovery.patch 
-    patch /usr/bin/gstlal_inspiral ./disable_service_discovery.patch
