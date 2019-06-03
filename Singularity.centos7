@@ -35,3 +35,10 @@ Include: yum
     yum clean all
     yum makecache
     yum -y update
+
+    # Commands taken from https://www.lsc-group.phys.uwm.edu/lscdatagrid/doc/installclient-sl7.html
+
+    rpm -ivh http://repo.opensciencegrid.org/osg/3.4/osg-3.4-el7-release-latest.rpm
+    yum clean all
+    yum makecache
+    yum -y install ldg-client
