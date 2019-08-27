@@ -43,6 +43,10 @@ Include: yum
     yum makecache
     yum -y install ldg-client
 
+    # Need to create /cvmfs to ensure bind-mount of cvmfs without overlay enabled will work
+
+    mkdir /cvmfs
+
 %environment
     # By default the PATH is set to /bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin,
     # but we can remove /bin and /sbin, since they are just symlinks to /usr/bin and /usr/sbin.
