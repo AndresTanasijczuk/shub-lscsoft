@@ -51,4 +51,5 @@ Include: yum
     # By default the PATH is set to /bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin,
     # but we can remove /bin and /sbin, since they are just symlinks to /usr/bin and /usr/sbin.
     # Let set the other directories in PATH in the same order as in the LIGO Caltech clusters.
-    export PATH=/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin
+    PATH=/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin
+    export PATH
