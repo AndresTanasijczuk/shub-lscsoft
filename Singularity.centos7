@@ -43,6 +43,13 @@ Include: yum
     yum makecache
     yum -y install ldg-client
 
+    # Commands taken from https://software.intel.com/en-us/articles/installing-intel-free-libs-and-python-yum-repo
+
+    yum -y install yum-utils
+    yum-config-manager --add-repo https://yum.repos.intel.com/mkl/setup/intel-mkl.repo
+    rpm --import https://yum.repos.intel.com/intel-gpg-keys/GPG-PUB-KEY-INTEL-SW-PRODUCTS-2019.PUB
+    yum -y install intel-mkl-2020.0-088
+
     # Need to create /cvmfs to ensure bind-mount of cvmfs without overlay enabled will work
 
     mkdir /cvmfs
