@@ -17,7 +17,7 @@ Include: yum
     yum -y update
     yum -y groupinstall "Compatibility Libraries" "Development Tools" "Scientific Support"
     rpm -e --nodeps git perl-Git
-    yum -y install python2-pip python-setuptools
+    yum -y install python2-pip
     yum -y install zlib-devel
     yum -y install libpng-devel libjpeg-devel
     yum -y install libsqlite3-dev sqlite-devel
@@ -30,7 +30,7 @@ Include: yum
     yum -y install libmetaio libmetaio-devel libmetaio-utils
     yum -y install hdf5 hdf5-devel
     yum -y install python-devel
-    pip install --upgrade pip setuptools
+    pip install --upgrade pip
     pip install mkl ipython
 
     # Commands taken from https://wiki.ligo.org/Computing/ScientificLinux
