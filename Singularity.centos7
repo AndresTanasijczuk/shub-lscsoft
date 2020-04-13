@@ -15,9 +15,7 @@ Include: yum
     yum clean all
     yum makecache
     yum -y update
-    yum -y groupinstall "Compatibility Libraries"
-    yum -y groupinstall "Development Tools"
-    yum -y groupinstall "Scientific Support"
+    yum -y groupinstall "Compatibility Libraries" "Development Tools" "Scientific Support"
     rpm -e --nodeps git perl-Git
     yum -y install python2-pip python-setuptools
     yum -y install zlib-devel
@@ -32,7 +30,6 @@ Include: yum
     yum -y install libmetaio libmetaio-devel libmetaio-utils
     yum -y install hdf5 hdf5-devel
     yum -y install python-devel
-    yum -y install osg-wn-client osg-ca-certs
     pip install --upgrade pip setuptools
     pip install mkl ipython
 
