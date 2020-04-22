@@ -23,7 +23,9 @@ Include: yum
     yum -y update
     yum -y install lscsoft-all
 
+    # Install Intel MKL
     # Commands taken from https://software.intel.com/en-us/articles/installing-intel-free-libs-and-python-yum-repo
+    # Actually, in the LDG cluster, Intel Parallel Studio is installed: see https://git.ligo.org/sccb/requests/-/issues/480
 
     yum -y install yum-utils
     yum-config-manager --add-repo https://yum.repos.intel.com/mkl/setup/intel-mkl.repo
